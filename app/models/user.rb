@@ -7,6 +7,7 @@ class User < ApplicationRecord
 	attr_accessor :password
 
 	has_many :pets
+	has_many :tasks
 
 	validates_presence_of :password, on: :create
 	validates_confirmation_of :password
