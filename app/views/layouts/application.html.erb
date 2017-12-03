@@ -44,12 +44,12 @@
 		      
 		      <ul class="nav navbar-nav navbar-right">
 		      	<% if current_user %>
-			        <li>
-			        	<%= link_to "Log in", new_session_path %>
-			        </li>
+		      		<li>
+			        	<%= link_to 'Log out', session_path, data: {method: :delete} %>
+			        </li>			        
 			      <% else %>
 							<li>
-			        	<%= link_to 'Log out', session_path, data: {method: :delete} %>
+			        	<%= link_to "Log in", new_session_path %>
 			        </li>
 			      <% end %>
 		      </ul>

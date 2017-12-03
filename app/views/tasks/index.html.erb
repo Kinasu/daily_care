@@ -1,1 +1,9 @@
-xnj nj yfgbcfyj vyjuj dctuj
+<div class="row">
+	<div class="col">
+		<% @pets.each do |pet| %>
+			<% if pet.baby == true %>
+				<%= pet.pet_name %>
+			<% end %>
+		<% end %>
+	</div>
+</div>

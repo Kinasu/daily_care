@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   # удаляет сессию залогиненного юзера
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: 'Вы разлогинились! Приходите еще!'
+    redirect_to root_path, notice: 'Вы разлогинились! Приходите еще!'
   end
 
 end
