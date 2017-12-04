@@ -2,7 +2,7 @@
 	<div class="col">
 		<% @pets.each do |pet| %>
 			<% if pet.baby == true %>
-				<%= pet.pet_name %>
+				<%= image_tag pet_avatar(pet) %>
 			<% end %>
 		<% end %>
 	</div>
