@@ -4,4 +4,6 @@ class Pet < ApplicationRecord
 
 	validates :pet_name, :breed, :user_id, presence: true
 	validates :pet_name, uniqueness: true
+
+	
 end

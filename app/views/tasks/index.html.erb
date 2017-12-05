@@ -1,9 +1,6 @@
 <div class="row">
 	<div class="col">
-		<% @pets.each do |pet| %>
-			<% if pet.baby == true %>
-				<%= image_tag pet_avatar(pet) %>
-			<% end %>
-		<% end %>
+		
+		<%= image_tag (@random_baby.pet_avatar_url) %>
 	</div>
 </div>

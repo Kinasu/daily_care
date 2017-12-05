@@ -6,4 +6,7 @@ module ApplicationHelper
       asset_path 'avatar.jpg'
     end
   end
+
+  
 end
+
