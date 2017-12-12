@@ -1,6 +1,21 @@
+<div><%= session[:user_id] %></div>
 <div class="row">
-	<div class="col">
-		
-		<%= @baby_pets.pet_name %>
+	<div class="col-xs-4"></div>
+	<div class="col-xs-4">
+	  <% if session[:user_id].present? %>
+
+			<% @tasks.each do |i| %>
+				<p>Name: <%= i.task_name %></p>
+				<p><%= i %></p>
+				<p>Text: <%= i.task_text %></p>
+				<p>Pet: <%= @pets.where(id: i.pet_id).map(&:pet_name)[0] %></p>
+				<p>Master: <%= @users.where(id: i.user_id).map(&:name)[0] %></p>
+			<% end %>
+
+			<% else %>
+				<%= redirect_to 'users/index' %>
+		<% end %>
 	</div>
+	<div class="col-xs-4"></div>
+
 </div>

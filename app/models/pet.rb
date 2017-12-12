@@ -6,6 +6,6 @@ class Pet < ApplicationRecord
 	validates :pet_name, uniqueness: true
 
 	def self.select_random
-  	Pet.where(id: 4.times.map{Random.rand(Pet.all.size)})
+  	Pet.where(id: rand(Pet.all.size))
   end
 end

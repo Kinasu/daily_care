@@ -1,0 +1,22 @@
+<div>
+  <% if session[:user_id].present? %>
+    <%= session[:user_id].present? %>
+    <%= session[:user_id] %></div>
+  <% else %>
+    <p>nil</p>
+
+  <% end %>
+<div class="row">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4">
+    <% @random_pet.each do |i| %>
+      <% if i != nil %>
+   		  <%= image_tag pet_avatar(i) %>
+        <p><%= i.pet_name %></p>        
+      <% else %>
+        <p>pet</p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-xs-4"></div>
+</div>

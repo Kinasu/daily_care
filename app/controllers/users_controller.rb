@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 
   def show
+  end
 
+  def index
+    @tasks = Task.all
+    @pets = Pet.all
+    @random_pet = @pets.select_random
   end
 
   private
