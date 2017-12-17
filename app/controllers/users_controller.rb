@@ -9,6 +9,12 @@ class UsersController < ApplicationController
     @random_pet = @pets.select_random
   end
 
+  def user_unlogin
+    if user.nil?
+      redirect_to root_path
+    end
+  end
+
   private
 
   def authorize_user

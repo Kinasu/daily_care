@@ -3,7 +3,6 @@
 	<div class="col-xs-4"></div>
 	<div class="col-xs-4">
 	  <% if session[:user_id].present? %>
-
 			<% @tasks.each do |i| %>
 				<p>Name: <%= i.task_name %></p>
 				<p><%= i %></p>
@@ -13,7 +12,7 @@
 			<% end %>
 
 			<% else %>
-				<%= redirect_to 'users/index' %>
+				<% @user.user_unlogin %>
 		<% end %>
 	</div>
 	<div class="col-xs-4"></div>

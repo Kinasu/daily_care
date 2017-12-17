@@ -1,11 +1,18 @@
 <div>
   <% if session[:user_id].present? %>
     <%= session[:user_id].present? %>
-    <%= session[:user_id] %></div>
+    <%= session[:user_id] %>
   <% else %>
     <p>nil</p>
 
   <% end %>
+</div>
+
+<div>
+  <% if @user.nil? %>
+    <h1>current!</h1>
+  <% end %>
+</div>
 <div class="row">
   <div class="col-xs-4"></div>
   <div class="col-xs-4">
